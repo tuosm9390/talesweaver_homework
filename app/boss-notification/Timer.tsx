@@ -4,16 +4,13 @@ import moment from 'moment';
 import 'moment/locale/ko';
 import React, { useState } from "react";
 import Moment from "react-moment";
-import { useInterval } from "use-interval";
 
 const Timer = () => {
-  const [nowTime, setNowTime] = useState(Date.now())
-
   const [hours, setHours] = useState("00")
   const [minutes, setMinutes] = useState("00")
   const [seconds, setSeconds] = useState("00")
 
-  useInterval(() => {
+  const currentTimer = () => {
     const date = new Date()
     const hours = String(date.getHours()).padStart(2, "0")
     const minutes = String(date.getMinutes()).padStart(2, "0")
@@ -21,8 +18,13 @@ const Timer = () => {
     setHours(`${hours}`)
     setMinutes(`${minutes}`)
     setSeconds(`${seconds}`)
-    setNowTime(Date.now())
-  }, 1000)
+  }
+
+  const startTimer = () => {
+    setInterval(currentTimer, 1000)
+  }
+
+  startTimer()
 
   return (
     <div className="py-6 flex flex-col border-[1px] border-gray-700 w-full rounded-lg mt-4 items-center justify-center">

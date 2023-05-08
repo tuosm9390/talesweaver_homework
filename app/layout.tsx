@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Navbar />
-        <div className='pb-20 pt-28 px-8'>
+        <div className='pb-20 pt-28 px-8 max-w-[1536px] mx-auto'>
           {children}
         </div>
       </body>

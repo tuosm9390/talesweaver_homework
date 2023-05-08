@@ -6,6 +6,9 @@ const nextConfig = {
     appDir: true,
   },
   trailingSlash: true,
-}
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

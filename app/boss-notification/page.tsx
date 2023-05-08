@@ -1,3 +1,4 @@
+import BossList from "./BossList";
 import NextBoss from "./NextBoss";
 import Timer from "./Timer";
 
@@ -14,6 +15,7 @@ const BossNotificationPage = () => {
       </div>
       <div className="boss-time text-2xl font-medium mb-10">
         필드보스 시간표
+        <BossList />
       </div>
     </div>
   );

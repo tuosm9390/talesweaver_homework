@@ -5,33 +5,37 @@
 html,
 body,
 :root {
-    height: 100%;
-    background: #07010a;
-    color: white;
+  height: 100%;
+  background: #07010a;
+  color: white;
 }
 
 hr {
-    color: white;
-    background: white;
+  color: white;
+  background: white;
 }
 
 table {
-    border-collapse: separate;
-    border-spacing: 0 10px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+select > option {
+  color: black;
 }
 
 .leaflet-bottom,
 .leaflet-control,
 .leaflet-pane,
 .leaflet-top {
-    z-index: 0 !important;
+  z-index: 0 !important;
 }
 
 .rdrMonth {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .rdrCalendarWrapper {
-    width: 100% !important;
-    font-size: 16px !important;
+  width: 100% !important;
+  font-size: 16px !important;
 }
